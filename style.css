@@ -11,6 +11,26 @@
     font-size: 1.2rem;
 }
 
+.header .icons {
+    color: #b1b1b1;
+    display: flex;
+    gap: 20px;
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    
+    background-color: white;
+}
+.box.image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
 
 /*& Background color + position window app*/
 
@@ -66,26 +86,27 @@ main{
 }
 
 
-/*^ Box Immagini */
 
-.box-image {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    
-    background-color: #009688;
-}
 
-.box-image img {
-    display: block;
+/** Sezione Notifiche */
+
+.notification {
     width: 100%;
-    height: 100%;
-    border-radius: 50%;
-}
-/*^----*/
+    height: 100px;
 
-.icons {
-    color: #b1b1b1;
-    display: flex;
-    gap: 20px;
+    background-color: #8edafc;
+}
+
+.bell-color {
+    color: #8edafc;
+} 
+
+.notification-message .recive {
+    font-weight: 600;
+}
+
+.notification-message .active {
+    color: gray;
+    text-decoration: underline;
+    font-size: 14px;
 }
