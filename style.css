@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*& Background color + position window app*/
+
+#top-bg {
+    height: 15vh;
+    background-color: #009688;
+}
+
+#bottom-bg {
+    height: 85vh;
+    background-color: #d5dbda;
+}
+
+.window-app {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    transform: translate(-50% -50%);
+}
+
+.container-app{
+    background-color: white;
+    width: 1500px;
+    height: 800px;
+} 
+
+/*&-----------------*/
