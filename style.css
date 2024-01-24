@@ -35,6 +35,12 @@
     cursor: pointer;
 }
 
+ul{
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
 
 /*& Background color + position window app*/
 
@@ -129,4 +135,19 @@ main{
 
     padding: 10px 10px;
     background-color: white;
+}
+
+/** Sezione contatti */
+
+.contacts-list{
+    width: 100%;
+    height: 80px;
+
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea; /*!solo per construzione da rimuovere*/
+}
+
+.last-message{
+    color: gray;
+    font-size: 14px;
 }
