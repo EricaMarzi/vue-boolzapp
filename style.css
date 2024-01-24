@@ -177,3 +177,10 @@ main{
     height: 80px;
     background-color: #f3eeea;
 } 
+
+/** Sezione Scrivi  un messaggio */
+
+.footer-main .icon {
+    color: gray;
+}
+
