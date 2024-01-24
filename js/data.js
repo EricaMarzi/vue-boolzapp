@@ -1,13 +1,13 @@
 const data = {
   user: {
-    name: 'Nome Utente',
-    avatar: '_io'
+    name: 'Quinn Laveau',
+    avatar: 'avatar_io.jpg'
   },
   contacts: [
     {
       id: 1,
-      name: 'Michele',
-      avatar: '_1',
+      name: 'Gabe',
+      avatar: 'avatar_gabe.png',
       messages: [
         {
           id: 1,
@@ -31,8 +31,8 @@ const data = {
     },
     {
       id: 2,
-      name: 'Fabio',
-      avatar: '_2',
+      name: 'Beatrix',
+      avatar: 'avatar_beatrix.png',
       messages: [
         {
           id: 1,
@@ -56,8 +56,8 @@ const data = {
     },
     {
       id: 3,
-      name: 'Samuele',
-      avatar: '_3',
+      name: 'Sahara',
+      avatar: 'avatar_sahara.png',
       messages: [
         {
           id: 1,
@@ -68,7 +68,7 @@ const data = {
         {
           id: 2,
           date: '28/03/2020 10:20:10',
-          text: 'Sicuro di non aver sbagliato chat?',
+          text: 'Sicura di non aver sbagliato chat?',
           status: 'sent'
         },
         {
@@ -81,8 +81,8 @@ const data = {
     },
     {
       id: 4,
-      name: 'Alessandro B.',
-      avatar: '_4',
+      name: 'Hannah',
+      avatar: 'avatar_hannah.png',
       messages: [
         {
           id: 1,
@@ -100,8 +100,8 @@ const data = {
     },
     {
       id: 5,
-      name: 'Alessandro L.',
-      avatar: '_5',
+      name: 'Ireena',
+      avatar: 'avatar_ireena.png',
       messages: [
         {
           id: 1,
@@ -119,13 +119,13 @@ const data = {
     },
     {
       id: 6,
-      name: 'Claudia',
-      avatar: '_6',
+      name: 'Lilbeth',
+      avatar: 'avatar_lilbeth.png',
       messages: [
         {
           id: 1,
           date: '10/01/2020 15:30:55',
-          text: 'Ciao Claudia, hai novità?',
+          text: 'Ciao Lily, hai novità?',
           status: 'sent'
         },
         {
@@ -144,13 +144,13 @@ const data = {
     },
     {
       id: 7,
-      name: 'Federico',
-      avatar: '_7',
+      name: 'Valdemar',
+      avatar: 'avatar_valdemar.png',
       messages: [
         {
           id: 1,
           date: '10/01/2020 15:30:55',
-          text: 'Fai gli auguri a Martina che è il suo compleanno!',
+          text: 'Fai gli auguri a Isabelle che è il suo compleanno!',
           status: 'sent'
         },
         {
@@ -163,13 +163,13 @@ const data = {
     },
     {
       id: 8,
-      name: 'Davide',
-      avatar: '_8',
+      name: 'Isabelle',
+      avatar: 'avatar_isabelle.png',
       messages: [
         {
           id: 1,
           date: '10/01/2020 15:30:55',
-          text: 'Ciao, andiamo a mangiare la pizza stasera?',
+          text: 'Auguri! Andiamo a mangiare la pizza stasera per festeggiare?',
           status: 'received'
         },
         {
