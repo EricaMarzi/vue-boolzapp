@@ -34,16 +34,14 @@
         <section class="window-app d-flex justify-content-center  align-items-center">
             <div class="container-app d-flex">
                 <nav class="sidebar">
-                    <!--Utente-->
-                    <!--dati prendere dal data.js-->
-
                     <!--Header della sidebar-->
+                    <!--Utente-->
                     <div class="header px-3 d-flex justify-content-between align-items-center">
                         <div class="user-info d-flex align-items-center gap-2">
                             <div class="box image">
-                                <img src="img/avatar_io.jpg" alt="">
+                                <img :src="`img/${contactData.user.avatar}`" alt="">
                             </div>
-                            <div class="user name">Quinn Laveau</div> 
+                            <div class="user name">{{contactData.user.name}}</div> 
                         </div>
                         <div class="icons">
                             <i class="fa-solid fa-circle-notch fa-xl"></i>
@@ -77,13 +75,13 @@
                     <!--dati prendere dal data.js-->
                     <section class="contacts">
                         <ul>
-                            <li class="contacts-list d-flex align-items-center">
+                            <li v-for="contact in contactData.contacts" class="contacts-list d-flex align-items-center">
                                 <div class="contact-info px-3 d-flex align-items-center gap-2">
                                     <div class="box image">
-                                        <img src="img/avatar_gabe.png" alt="">
+                                        <img src="`img/${contact.avatar}`" alt="">
                                     </div>
                                     <div>
-                                        <div class="contact name">Gabe</div> 
+                                        <div class="contact name">{{contact.name}}</div> 
                                         <div class="last-message">*ultimo messaggio*</div>
                                     </div>
                                 </div>

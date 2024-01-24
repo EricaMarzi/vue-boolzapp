@@ -3,12 +3,9 @@ const {createApp} = Vue;
 const app = createApp({
     data(){
         return {
-            contactData: data,
+            contactData: data
         }
-    },
+    }
 });
 
 app.mount('#root')
-
-
-console.log(data)
