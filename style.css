@@ -151,7 +151,7 @@ main{
     border-bottom: 1px solid #eaeaea; /*!solo per construzione da rimuovere*/
 }
 
-.last-message{
+.last-message, .last-access{
     color: gray;
     font-size: 14px;
 }
