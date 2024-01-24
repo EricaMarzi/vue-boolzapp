@@ -178,6 +178,26 @@ main{
     background-color: #f3eeea;
 } 
 
+/** Sezione Messaggi */
+
+.message{
+    max-width: fit-content;
+    padding: 20px 10px;
+    border-radius: 10px;
+}
+
+.message.send{
+    background-color: #d5f9ba;
+    position: relative;
+    left: 850px;
+}
+
+.message.received{
+    background-color: white;
+    position: relative;
+    left: 10px;
+}
+
 /** Sezione Scrivi  un messaggio */
 
 .footer-main .icon {
