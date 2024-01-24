@@ -3,7 +3,8 @@ const {createApp} = Vue;
 const app = createApp({
     data(){
         return {
-            contactData: data
+            contactData: data,
+            currentId: 1
         }
     }
 });

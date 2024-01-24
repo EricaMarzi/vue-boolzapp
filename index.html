@@ -37,7 +37,7 @@
                     <!--Header della sidebar-->
                     <!--Utente-->
                     <div class="header px-3 d-flex justify-content-between align-items-center">
-                        <div class="user-info d-flex align-items-center gap-2">
+                        <div class="user-info d-flex align-items-center gap-3">
                             <div class="box image">
                                 <img :src="`img/${contactData.user.avatar}`" alt="">
                             </div>
@@ -73,10 +73,10 @@
 
                     <!--Contatti-->
                     <!--dati prendere dal data.js-->
-                    <section class="contacts">
+                    <section class="contacts overflow">
                         <ul>
-                            <li v-for="contact in contactData.contacts" class="contacts-list d-flex align-items-center">
-                                <div class="contact-info px-3 d-flex align-items-center gap-2">
+                            <li v-for="contact in contactData.contacts" class="contacts-list pointer d-flex align-items-center">
+                                <div class="contact-info px-3 d-flex align-items-center gap-3">
                                     <div class="box image">
                                         <img :src="`img/${contact.avatar}`" alt="">
                                     </div>
@@ -92,7 +92,7 @@
                 <main>
                     <!--Header del main-->
                     <section class="header main px-3 d-flex align-items-center justify-content-between">
-                        <div class="contact-info d-flex align-items-center gap-2">
+                        <div class="contact-info d-flex align-items-center gap-3">
                             <div class="box image">
                                 <img src="img/avatar_gabe.png" alt="">
                             </div>
@@ -109,9 +109,13 @@
                     </section>
                     <!--Messaggi inviati/ricevuti-->
                     <section class="background-message p-3">
-                        <div class=" mb-2 message send">Ciao, come stai?</div>
-                        <div class="mb-2 message received">Bene e tu?</div>
-                        <div class=" mb-2 message send">(Non) mi lamento</div>
+                        <div v-for="contact in contactData" v-show="contact.id === currentId">
+                            <div v-for="message in contactData.contacts.messages">
+                                <div class=" mb-2 message send">Ciao, come stai?</div>
+                                <div class="mb-2 message received">Bene e tu?</div>
+                                <div class=" mb-2 message send">(Non) mi lamento</div>
+                            </div>
+                        </div>
                     </section>
 
                     <!--Scrivi  un messaggio-->

@@ -79,8 +79,7 @@ ul{
 nav{
     width: 30%;
     height: 100%;
-
-    border-right: 1px solid black ;
+    border-right: 2px solid gainsboro;
 }
 
 main{
@@ -142,6 +141,9 @@ main{
 }
 
 /** Sezione contatti */
+.contacts{
+    height: calc(100% - 230px);
+}
 
 .contacts-list{
     width: 100%;
@@ -180,15 +182,17 @@ main{
 /** Sezione Messaggi */
 
 .message{
-    max-width: fit-content;
-    padding: 20px 10px;
+    min-width: 200px;
+    max-width: 500px;
+    width: fit-content;
+    padding: 15px;
     border-radius: 10px;
 }
 
 .message.send{
     background-color: #d5f9ba;
     position: relative;
-    left: 850px;
+    left: 800px;
 }
 
 .message.received{
@@ -203,3 +207,20 @@ main{
     color: gray;
 }
 
+
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color:#eaeaea;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px; 
+    background:#66b8b2; 
+}
