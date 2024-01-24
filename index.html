@@ -78,7 +78,7 @@
                             <li v-for="contact in contactData.contacts" class="contacts-list d-flex align-items-center">
                                 <div class="contact-info px-3 d-flex align-items-center gap-2">
                                     <div class="box image">
-                                        <img src="`img/${contact.avatar}`" alt="">
+                                        <img :src="`img/${contact.avatar}`" alt="">
                                     </div>
                                     <div>
                                         <div class="contact name">{{contact.name}}</div> 
