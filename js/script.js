@@ -15,13 +15,12 @@ const app = createApp({
             return this.contacts.find((contact) => (contact.id === this.currentId) )    
         },
 
-        // filteredContact(){
-        //     const searchName = this.searchText.toLowerCase()
-        //     return this.contacts.filter(contact => {
-        //         if (contact.text.toLowerCase().includes(searchName))return true
-        //         else return false
-        //     })
-        // }
+        filteredContact(){
+            const searchName = this.searchText.toLowerCase()
+            return this.contacts.filter(contact => {
+                return contact.name && contact.name.toLowerCase().includes(searchName);
+            })
+        }
     },
     methods: {
         sendNewMessage(){
@@ -37,7 +36,7 @@ const app = createApp({
             this.currentContact.messages.push(messageSent)
             this.newMessage =''
 
-            setTimeout(function() {
+            setTimeout(() => {
                 const messageReply = {
                     id: new Date().toISOString(),
                     date: new Date().toISOString(),
@@ -55,3 +54,10 @@ app.mount('#root')
 
 
 
+ // filteredContact(){
+        //     const searchName = this.searchText.toLowerCase()
+        //     return this.contacts.filter(contact => {
+        //         if (contact.text.toLowerCase().includes(searchName))return true
+        //         else return false
+        //     })
+        // }

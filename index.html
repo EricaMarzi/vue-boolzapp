@@ -75,7 +75,7 @@
                     <section class="contacts overflow">
                         <ul>
                             <!--qui è dove devi cambiare l'array sul quale ciclare-->
-                            <li v-for="contact in contacts" :key="contact.id" class="contacts-list pointer d-flex align-items-center" @click="currentId = contact.id">
+                            <li v-for="contact in filteredContact" :key="contact.id" class="contacts-list pointer d-flex align-items-center" @click="currentId = contact.id">
                                 <div class="contact-info px-3 d-flex align-items-center gap-3">
                                     <div class="box image">
                                         <img :src="`img/avatar${contact.avatar}`" alt="contact.name">
