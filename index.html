@@ -90,7 +90,6 @@
                 </nav>
                 <main>
                     <!--Header del main-->
-                    <!--Da dinamicizzare-->
                     <section class="header main px-3 d-flex align-items-center justify-content-between">
                         <div class="contact-info d-flex align-items-center gap-3">
                             <div class="box image">
@@ -109,11 +108,9 @@
                     </section>
                     <!--Messaggi inviati/ricevuti-->
                     <section class="background-message p-3">
-                        
-                            <div v-for="message in currentContact.messages">
-                                <div class="message mb-2" :class="message.status === 'sent' ? 'sent' : 'received'">{{message.text}}</div>
-                            </div>
-                        
+                        <div v-for="message in currentContact.messages" class="clear-fix">
+                            <div class="message mb-2" :class="message.status === 'sent' ? 'sent' : 'received'">{{message.text}}</div>
+                        </div>                    
                     </section>
 
                     <!--Scrivi  un messaggio-->

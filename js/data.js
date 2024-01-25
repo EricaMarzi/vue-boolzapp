@@ -170,19 +170,19 @@ const data = {
           id: 1,
           date: '10/01/2020 15:30:55',
           text: 'Auguri! Andiamo a mangiare la pizza stasera per festeggiare?',
-          status: 'received'
+          status: 'sent'
         },
         {
           id: 2,
           date: '10/01/2020 15:50:00',
           text: 'No, l\'ho già mangiata ieri, ordiniamo sushi!',
-          status: 'sent'
+          status: 'received'
         },
         {
           id: 3,
           date: '10/01/2020 15:51:00',
           text: 'OK!!',
-          status: 'received'
+          status: 'sent'
         }
       ],
     }
