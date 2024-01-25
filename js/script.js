@@ -5,12 +5,12 @@ const app = createApp({
         return {
             user: data.user,
             contacts: data.contacts,
-            currentId: 2
+            currentId: 1
         }
     },
     computed: {
         currentContact(){
-        return this.contacts.find((contact) => (contact.id === this.currentId) )    
+            return this.contacts.find((contact) => (contact.id === this.currentId) )    
         }
     },
     methods: {

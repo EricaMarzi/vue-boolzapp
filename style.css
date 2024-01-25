@@ -189,7 +189,7 @@ main{
     border-radius: 10px;
 }
 
-.message.send{
+.message.sent{
     background-color: #d5f9ba;
     position: relative;
     left: 800px;

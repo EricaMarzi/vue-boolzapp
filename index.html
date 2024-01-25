@@ -92,12 +92,12 @@
                     <!--Header del main-->
                     <!--Da dinamicizzare-->
                     <section class="header main px-3 d-flex align-items-center justify-content-between">
-                        <div v-show="contacts.id === currentId" class="contact-info d-flex align-items-center gap-3">
+                        <div class="contact-info d-flex align-items-center gap-3">
                             <div class="box image">
-                                <img src="img/avatar_gabe.png" alt="contact.name">
+                                <img :src="`img/avatar${currentContact.avatar}`" alt="">
                             </div>
                             <div>
-                                <div class="contact name">Gabe</div> 
+                                <div class="contact name">{{currentContact.name}}</div> 
                                 <div class="last-access">*ultimo accesso*</div>
                             </div>
                         </div>
@@ -110,9 +110,8 @@
                     <!--Messaggi inviati/ricevuti-->
                     <section class="background-message p-3">
                         
-                            <div>
-                                <div class="message send mb-2">Ciao, come stai?</div>
-                                <div class="message received mb-2">Bene e tu?</div>
+                            <div v-for="message in contacts.messages">
+                                <div class="message mb-2" :class="message.status === 'sent' ? 'sent' : 'received'">{{currentContact.messages.text}}</div>
                             </div>
                         
                     </section>
