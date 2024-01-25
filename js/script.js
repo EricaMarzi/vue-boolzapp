@@ -20,18 +20,29 @@ const app = createApp({
                 return; 
               }
             const messageSent = {
-                id: luxon.DateTime.now().toLocaleString(),
-                date: luxon.DateTime.now().toLocaleString(),
+                id: new Date().toISOString(),
+                date: new Date().toISOString(),
                 text: this.newMessage,
                 status: 'sent'
-              } 
-              this.contacts[this.currentContact][this.messages].push(messageSent)
-              this.newMessage =''
-        }
+            } 
+            this.currentContact.messages.push(messageSent)
+            this.newMessage =''
+
+            setTimeout(function() {
+                const messageReply = {
+                    id: new Date().toISOString(),
+                    date: new Date().toISOString(),
+                    text: 'Okay',
+                    status: 'received'
+                } 
+                this.currentContact.messages.push(messageReply)
+            }, 1000)
+        },
     }
 });
 
 app.mount('#root')
+
 
 
 
