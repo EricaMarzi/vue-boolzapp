@@ -116,7 +116,9 @@
                     <!--Scrivi  un messaggio-->
                     <section class="footer-main px-3 d-flex align-items-center gap-3">
                         <i class="icon fa-regular fa-face-smile fa-2xl"></i>
-                        <input type="text" class="text-message py-3 form-control" placeholder="Scrivi un messaggio">
+
+                        <input v-model.trim="newMessage" type="text" class="text-message py-3 form-control" placeholder="Scrivi un messaggio" @keyup.enter="sendNewMessage()">
+                        
                         <i class="icon fa-solid fa-microphone fa-2xl"></i>
                     </section>
                 </main>

@@ -187,14 +187,6 @@ main{
 
 /** Sezione Messaggi */
 
-/* .background-message{
-    width: 100%;
-    height: calc(100% - 160px);
-    background-image: url(img/mine.jpg);
-
-    display: flex;
-    flex-direction: column;
-} */
 
 .message{
     min-width: 200px;
@@ -206,16 +198,12 @@ main{
 
 .message.sent{
     background-color: #d5f9ba;
-    /* position: relative;
-    left: 800px; */
-    float: left;
+    float: right;
 }
 
 .message.received{
     background-color: white;
-    /* position: relative;
-    left: 10px; */
-    float: right;
+    float: left;
 }
 
 /** Sezione Scrivi  un messaggio */
