@@ -16,13 +16,17 @@ const app = createApp({
     },
     methods: {
         sendNewMessage(){
-            const nuovoMessaggio = {
-                id: 12,
-                date: '10/01/2020 15:30:55',
+            if (this.newMessage.trim() === '') {
+                return; 
+              }
+            const messageSent = {
+                id: luxon.DateTime.now().toLocaleString(),
+                date: luxon.DateTime.now().toLocaleString(),
                 text: this.newMessage,
                 status: 'sent'
               } 
-              this.contacts.messages.push(nuovoMessaggio)
+              this.contacts[this.currentContact][this.messages].push(messageSent)
+              this.newMessage =''
         }
     }
 });
@@ -31,13 +35,3 @@ app.mount('#root')
 
 
 
-
-/*
-        const nuovoMessaggio = {
-          id: 0734097, => da generare
-          date: '10/01/2020 15:30:55', => prendere dinamicamente
-          text: this.newMessage
-          status: 'sent'
-        } 
-        this.contacts.messages.push(nuovoMessaggio)=> pushato dentro messages che è dentro currentContacts
-*/
