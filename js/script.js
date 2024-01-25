@@ -8,6 +8,11 @@ const app = createApp({
             currentId: 2
         }
     },
+    computed: {
+        currentContact(){
+        return this.contacts.find((contact) => (contact.id === this.currentId) )    
+        }
+    },
     methods: {
         
     }
