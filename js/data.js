@@ -1,13 +1,13 @@
 const data = {
   user: {
     name: 'Quinn Laveau',
-    avatar: 'avatar_quinn.png'
+    avatar: '_quinn.png'
   },
   contacts: [
     {
       id: 1,
       name: 'Gabe',
-      avatar: 'avatar_gabe.png',
+      avatar: '_gabe.png',
       messages: [
         {
           id: 1,
@@ -32,7 +32,7 @@ const data = {
     {
       id: 2,
       name: 'Beatrix',
-      avatar: 'avatar_beatrix.png',
+      avatar: '_beatrix.png',
       messages: [
         {
           id: 1,
@@ -57,7 +57,7 @@ const data = {
     {
       id: 3,
       name: 'Sahara',
-      avatar: 'avatar_sahara.png',
+      avatar: '_sahara.png',
       messages: [
         {
           id: 1,
@@ -82,7 +82,7 @@ const data = {
     {
       id: 4,
       name: 'Hannah',
-      avatar: 'avatar_hannah.png',
+      avatar: '_hannah.png',
       messages: [
         {
           id: 1,
@@ -101,7 +101,7 @@ const data = {
     {
       id: 5,
       name: 'Ireena',
-      avatar: 'avatar_ireena.png',
+      avatar: '_ireena.png',
       messages: [
         {
           id: 1,
@@ -120,7 +120,7 @@ const data = {
     {
       id: 6,
       name: 'Lilbeth',
-      avatar: 'avatar_lilbeth.png',
+      avatar: '_lilbeth.png',
       messages: [
         {
           id: 1,
@@ -145,7 +145,7 @@ const data = {
     {
       id: 7,
       name: 'Valdemar',
-      avatar: 'avatar_valdemar.png',
+      avatar: '_valdemar.png',
       messages: [
         {
           id: 1,
@@ -164,7 +164,7 @@ const data = {
     {
       id: 8,
       name: 'Isabelle',
-      avatar: 'avatar_isabelle.png',
+      avatar: '_isabelle.png',
       messages: [
         {
           id: 1,

@@ -3,10 +3,12 @@ const {createApp} = Vue;
 const app = createApp({
     data(){
         return {
-            contactData: data,
+            user: data.user,
+            contacts: data.contacts,
             currentId: 1
         }
     }
 });
 
 app.mount('#root')
+
