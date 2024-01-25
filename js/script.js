@@ -6,13 +6,22 @@ const app = createApp({
             user: data.user,
             contacts: data.contacts,
             currentId: 1,
-            newMessage: ''
+            newMessage: '',
+            searchText: ''
         }
     },
     computed: {
         currentContact(){
             return this.contacts.find((contact) => (contact.id === this.currentId) )    
-        }
+        },
+
+        // filteredContact(){
+        //     const searchName = this.searchText.toLowerCase()
+        //     return this.contacts.filter(contact => {
+        //         if (contact.text.toLowerCase().includes(searchName))return true
+        //         else return false
+        //     })
+        // }
     },
     methods: {
         sendNewMessage(){

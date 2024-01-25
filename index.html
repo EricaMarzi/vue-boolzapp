@@ -67,13 +67,14 @@
                             <span class="search-icon pointer input-group-text">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </span>
-                            <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat">
+                            <input v-model="searchText" type="text" class="form-control" placeholder="Cerca o inizia una nuova chat">
                           </div>
                     </section>
 
                     <!--Contatti-->
                     <section class="contacts overflow">
                         <ul>
+                            <!--qui è dove devi cambiare l'array sul quale ciclare-->
                             <li v-for="contact in contacts" :key="contact.id" class="contacts-list pointer d-flex align-items-center" @click="currentId = contact.id">
                                 <div class="contact-info px-3 d-flex align-items-center gap-3">
                                     <div class="box image">
