@@ -110,8 +110,8 @@
                     <!--Messaggi inviati/ricevuti-->
                     <section class="background-message p-3">
                         
-                            <div v-for="message in contacts.messages">
-                                <div class="message mb-2" :class="message.status === 'sent' ? 'sent' : 'received'">{{currentContact.messages.text}}</div>
+                            <div v-for="message in currentContact.messages">
+                                <div class="message mb-2" :class="message.status === 'sent' ? 'sent' : 'received'">{{message.text}}</div>
                             </div>
                         
                     </section>
