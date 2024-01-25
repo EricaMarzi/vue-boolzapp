@@ -5,10 +5,14 @@ const app = createApp({
         return {
             user: data.user,
             contacts: data.contacts,
-            currentId: 1
+            currentId: 2
         }
+    },
+    methods: {
+        
     }
 });
 
 app.mount('#root')
+
 

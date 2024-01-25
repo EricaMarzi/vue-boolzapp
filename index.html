@@ -74,7 +74,7 @@
                     <!--Contatti-->
                     <section class="contacts overflow">
                         <ul>
-                            <li v-for="contact in contacts" class="contacts-list pointer d-flex align-items-center">
+                            <li v-for="contact in contacts" :key="contact.id" class="contacts-list pointer d-flex align-items-center" @click="currentId = contact.id">
                                 <div class="contact-info px-3 d-flex align-items-center gap-3">
                                     <div class="box image">
                                         <img :src="`img/avatar${contact.avatar}`" alt="contact.name">
@@ -92,7 +92,7 @@
                     <!--Header del main-->
                     <!--Da dinamicizzare-->
                     <section class="header main px-3 d-flex align-items-center justify-content-between">
-                        <div class="contact-info d-flex align-items-center gap-3">
+                        <div v-show="contacts.id === currentId" class="contact-info d-flex align-items-center gap-3">
                             <div class="box image">
                                 <img src="img/avatar_gabe.png" alt="contact.name">
                             </div>
