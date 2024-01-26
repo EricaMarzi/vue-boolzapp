@@ -56,6 +56,14 @@ a {
     text-decoration: none;
 }
 
+.hover:hover {
+    background-color: #eaeaea;
+}
+
+hr {
+    margin: 0;
+}
+
 
 /*& Background color + position window app*/
 
@@ -219,14 +227,20 @@ main{
 }
 .message-list-menù {
     background-color: white;
-    padding: 15px;
 
     position: absolute;
-    right: 20px;
+    right: 0;
+    z-index: 1;
 
     box-shadow: 0 0 3px #4d4c4c;
     border-radius: 3px;
 }
+
+.message-list-menù li {
+    font-size: 14px;
+    padding: 5px 15px;
+}
+
 
 
 /** Sezione Scrivi  un messaggio */

@@ -75,7 +75,7 @@
                     <section class="contacts overflow">
                         <ul>
                             <!--qui è dove devi cambiare l'array sul quale ciclare-->
-                            <li v-for="contact in filteredContact" :key="contact.id" class="contacts-list pointer d-flex align-items-center" @click="currentId = contact.id">
+                            <li v-for="contact in filteredContact" :key="contact.id" class="contacts-list pointer hover d-flex align-items-center" @click="currentId = contact.id">
                                 <div class="contact-info px-3 d-flex align-items-center gap-3">
                                     <div class="box image">
                                         <img :src="`img/avatar${contact.avatar}`" alt="contact.name">
@@ -117,13 +117,14 @@
                                     <p class="mb-0">{{message.text}}</p>
                                     <!--menù a tendina messaggi-->
                                     <div class="message-menù">
-                                        <a href="#" role="button" @click="toggleMenù()">
+                                        <a href="#" role="button" @click="toggleMenù(), getCurrentIdMessage(message.id)">
                                           <i class="fa-solid fa-chevron-down fa-sm"></i>
                                         </a>
                                       
                                         <ul class="message-list-menù" :class="showCurrentMenùMessage(message.id)">
-                                          <li><a href="#">Informazioni messaggio</a></li>
-                                          <li><a href="#">Cancella messaggio</a></li>
+                                          <li class="hover"><a href="#">Informazioni messaggio</a></li>
+                                          <li><hr></li>
+                                          <li class="hover"><a href="#">Cancella messaggio</a></li>
                                         </ul>
                                       </div>
                                 </div>

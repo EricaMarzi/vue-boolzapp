@@ -8,7 +8,8 @@ const app = createApp({
             currentId: 1,
             newMessage: '',
             searchText: '',
-            showMenù: false
+            showMenù: false,
+            currentIdMessage: null 
         }
     },
     computed: {
@@ -23,9 +24,6 @@ const app = createApp({
             })
         },
 
-        currentIdMessage(){
-            return this.currentContact.messages.id
-        },
 
     },
     methods: {
@@ -56,8 +54,12 @@ const app = createApp({
             this.showMenù = !this.showMenù
         },
 
+        getCurrentIdMessage(messageId){
+            return this.currentIdMessage = messageId
+        },
+
         showCurrentMenùMessage(messageId){
-            if (this.showMenù && currentIdMessage === messageId){
+            if (this.showMenù && this.currentIdMessage === messageId){
                 return 'd-block'
             } else {
                 return 'd-none'
