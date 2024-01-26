@@ -109,7 +109,7 @@
                     </section>
                     <!--Messaggi inviati/ricevuti-->
                     <section class="background-message p-3">
-                        <div v-for="message in currentContact.messages" class="clear-fix">
+                        <div v-for="message in currentChat" class="clear-fix">
                             <!--avendo classe del css e status del messaggio impostati con lo stesso nome allora invece del ternario di può mettere nella classe dinamica direttamente message.status-->
                             <div 
                                 class="message mb-2 d-flex justify-content-between gap-2" 
@@ -124,7 +124,7 @@
                                         <ul class="message-list-menù" :class="showCurrentMenùMessage(message.id)">
                                           <li class="hover"><a href="#">Informazioni messaggio</a></li>
                                           <li><hr></li>
-                                          <li class="hover"><a href="#">Cancella messaggio</a></li>
+                                          <li class="hover" @click="deleteMessage(message.id)"><a href="#">Cancella messaggio</a></li>
                                         </ul>
                                       </div>
                                 </div>

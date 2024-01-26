@@ -16,6 +16,9 @@ const app = createApp({
         currentContact(){
             return this.contacts.find((contact) => (contact.id === this.currentId) )    
         },
+        currentChat(){
+            return this.currentContact.messages;
+        },
 
         filteredContact(){
             const searchName = this.searchText.toLowerCase()
@@ -37,7 +40,7 @@ const app = createApp({
                 text: this.newMessage,
                 status: 'sent'
             } 
-            this.currentContact.messages.push(messageSent)
+           this.currentChat.push(messageSent)
             this.newMessage =''
 
             setTimeout(() => {
@@ -47,7 +50,7 @@ const app = createApp({
                     text: 'Okay',
                     status: 'received'
                 } 
-                this.currentContact.messages.push(messageReply)
+               this.currentChat.push(messageReply)
             }, 1000)
         },
         toggleMenù(){
@@ -59,25 +62,21 @@ const app = createApp({
         },
 
         showCurrentMenùMessage(messageId){
-            if (this.showMenù && this.currentIdMessage === messageId){
-                return 'd-block'
-            } else {
-                return 'd-none'
-            }
-            //  return this.showMenù ? 'd-block' : 'd-none'
+            if (this.showMenù && this.currentIdMessage === messageId)return 'd-block'
+            else return 'd-none'
+        },
+
+        deleteMessage(messageId) {
+            console.log(messageId)
+
+           this.currentContact.messages =this.currentChat.filter((message) =>{
+                if(message.id !== messageId)return true;
+                return false;
+            }) 
+
+            
         }
     }
 });
 
 app.mount('#root')
-
-
-
-
- // filteredContact(){
-        //     const searchName = this.searchText.toLowerCase()
-        //     return this.contacts.filter(contact => {
-        //         if (contact.text.toLowerCase().includes(searchName))return true
-        //         else return false
-        //     })
-        // }
