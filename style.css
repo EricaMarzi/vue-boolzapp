@@ -51,6 +51,11 @@ ul{
     display: block;
 }
 
+a {
+    color: black;
+    text-decoration: none;
+}
+
 
 /*& Background color + position window app*/
 
@@ -206,6 +211,24 @@ main{
     float: left;
 }
 
+/* Menù a tendina messaggi */
+.message-menù{
+    position: relative;
+    bottom: 10px;
+    left: 5px;
+}
+.message-list-menù {
+    background-color: white;
+    padding: 15px;
+
+    position: absolute;
+    right: 20px;
+
+    box-shadow: 0 0 3px #4d4c4c;
+    border-radius: 3px;
+}
+
+
 /** Sezione Scrivi  un messaggio */
 
 .footer-main .icon {
@@ -213,6 +236,7 @@ main{
 }
 
 
+/*& Estetica scrollbar */
 
 ::-webkit-scrollbar {
     width: 7px;

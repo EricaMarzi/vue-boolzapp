@@ -7,7 +7,8 @@ const app = createApp({
             contacts: data.contacts,
             currentId: 1,
             newMessage: '',
-            searchText: ''
+            searchText: '',
+            showMenù: false
         }
     },
     computed: {
@@ -20,7 +21,12 @@ const app = createApp({
             return this.contacts.filter(contact => {
                 return contact.name && contact.name.toLowerCase().includes(searchName);
             })
-        }
+        },
+
+        currentIdMessage(){
+            return this.currentContact.messages.id
+        },
+
     },
     methods: {
         sendNewMessage(){
@@ -29,7 +35,7 @@ const app = createApp({
               }
             const messageSent = {
                 id: new Date().toISOString(),
-                date: new Date().toISOString(),
+                date: new Date().toLocaleDateString(),
                 text: this.newMessage,
                 status: 'sent'
             } 
@@ -39,13 +45,25 @@ const app = createApp({
             setTimeout(() => {
                 const messageReply = {
                     id: new Date().toISOString(),
-                    date: new Date().toISOString(),
+                    date: new Date().toLocaleDateString(),
                     text: 'Okay',
                     status: 'received'
                 } 
                 this.currentContact.messages.push(messageReply)
             }, 1000)
         },
+        toggleMenù(){
+            this.showMenù = !this.showMenù
+        },
+
+        showCurrentMenùMessage(messageId){
+            if (this.showMenù && currentIdMessage === messageId){
+                return 'd-block'
+            } else {
+                return 'd-none'
+            }
+            //  return this.showMenù ? 'd-block' : 'd-none'
+        }
     }
 });
 

@@ -110,7 +110,23 @@
                     <!--Messaggi inviati/ricevuti-->
                     <section class="background-message p-3">
                         <div v-for="message in currentContact.messages" class="clear-fix">
-                            <div class="message mb-2" :class="message.status === 'sent' ? 'sent' : 'received'">{{message.text}}</div>
+                            <!--avendo classe del css e status del messaggio impostati con lo stesso nome allora invece del ternario di può mettere nella classe dinamica direttamente message.status-->
+                            <div 
+                                class="message mb-2 d-flex justify-content-between gap-2" 
+                                :class="message.status === 'sent' ? 'sent' : 'received'">
+                                    <p class="mb-0">{{message.text}}</p>
+                                    <!--menù a tendina messaggi-->
+                                    <div class="message-menù">
+                                        <a href="#" role="button" @click="toggleMenù()">
+                                          <i class="fa-solid fa-chevron-down fa-sm"></i>
+                                        </a>
+                                      
+                                        <ul class="message-list-menù" :class="showCurrentMenùMessage(message.id)">
+                                          <li><a href="#">Informazioni messaggio</a></li>
+                                          <li><a href="#">Cancella messaggio</a></li>
+                                        </ul>
+                                      </div>
+                                </div>
                         </div>                    
                     </section>
 
@@ -125,6 +141,8 @@
                 </main>
             </div>
         </section>
+
+        
 
     </div>
 
