@@ -8,7 +8,7 @@ const app = createApp({
             currentId: 1,
             newMessage: '',
             searchText: '',
-            showMenù: false,
+            showMenu: false,
             currentIdMessage: null 
         }
     },
@@ -53,16 +53,16 @@ const app = createApp({
                this.currentChat.push(messageReply)
             }, 1000)
         },
-        toggleMenù(){
-            this.showMenù = !this.showMenù
+        toggleMenu(){
+            this.showMenu = !this.showMenu
         },
 
         getCurrentIdMessage(messageId){
             return this.currentIdMessage = messageId
         },
 
-        showCurrentMenùMessage(messageId){
-            if (this.showMenù && this.currentIdMessage === messageId)return 'd-block'
+        showCurrentMenuMessage(messageId){
+            if (this.showMenu && this.currentIdMessage === messageId)return 'd-block'
             else return 'd-none'
         },
 
@@ -72,10 +72,9 @@ const app = createApp({
            this.currentContact.messages =this.currentChat.filter((message) =>{
                 if(message.id !== messageId)return true;
                 return false;
-            }) 
+            })  
+        },
 
-            
-        }
     }
 });
 
