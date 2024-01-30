@@ -116,7 +116,7 @@
                                 :class="message.status === 'sent' ? 'sent' : 'received'">
                                     <p class="mb-0">{{message.text}}</p>
                                     <!--menù a tendina messaggi-->
-                                    <div class="message-menù">
+                                    <div class="message-menù" @mouseleave="showMenu = false">
                                         <a href="#" role="button" @click="toggleMenu(), getCurrentIdMessage(message.id)">
                                           <i class="fa-solid fa-chevron-down fa-sm"></i>
                                         </a>
