@@ -117,16 +117,17 @@
                                     <p class="mb-0">{{message.text}}</p>
                                     <!--menù a tendina messaggi-->
                                     <div class="message-menù" @mouseleave="showMenu = false">
-                                        <a href="#" role="button" @click="toggleMenu(), getCurrentIdMessage(message.id)">
+                                        <i href="#" role="button" @click="toggleMenu(), getCurrentIdMessage(message.id)">
                                           <i class="fa-solid fa-chevron-down fa-sm"></i>
-                                        </a>
+                                        </i>
                                       
                                         <ul 
                                          class="message-list-menù" 
-                                         :class="showCurrentMenuMessage(message.id)">
-                                            <li class="hover"><a href="#">Informazioni messaggio</a></li>
+                                         :class="showCurrentMenuMessage(message.id)"
+                                         @click="showMenu = false">
+                                            <li class="hover">Informazioni messaggio</li>
                                             <li><hr></li>
-                                            <li class="hover" @click="deleteMessage(message.id)"><a href="#">Cancella messaggio</a></li>
+                                            <li class="hover" @click="deleteMessage(message.id)">Cancella messaggio</li>
                                         </ul>
                                       </div>
                                 </div>
